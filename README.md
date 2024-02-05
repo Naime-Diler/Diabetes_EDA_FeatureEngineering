@@ -4,40 +4,42 @@
 
 In diesem Diabetes-Projekt standen eine eingehende explorative Datenanalyse (EDA) sowie kreatives Feature-Engineering im Vordergrund, bevor das maschinelle Lernmodell entwickelt wurde. Hier ist eine Zusammenfassung der wichtigsten Schritte:
 
-### Datenüberblick:
-- Der Datensatz stammt von Pima-Indianerinnen aus einer Diabetesstudie in den USA.
-- Enthält 768 Beobachtungen und 8 numerische unabhängige Variablen.
-- Die Zielvariable ist "Outcome" mit 1 für positives und 0 für negatives Diabetesergebnis.
+### Projektziel:
+Es wird angestrebt, ein maschinelles Lernmodell zu entwickeln, das die Fähigkeit besitzt, vorherzusagen, ob Personen an Diabetes erkrankt sind, wenn ihre charakteristischen Merkmale bekannt sind.
+
+### Datensatz:
+Der zugrundeliegende Datensatz stammt von den National Institutes of Diabetes-Digestive-Kidney Diseases in den USA. Die Daten wurden im Rahmen einer Diabetesstudie an Pima-Indianerinnen im Alter von 21 Jahren und älter erhoben. Der Datensatz umfasst 768 Beobachtungen und beinhaltet 8 numerische unabhängige Variablen. Die Zielvariable ist als "Outcome" festgelegt, wobei 1 ein positives Ergebnis bei einem Diabetes-Test anzeigt und 0 ein negatives Ergebnis bedeutet.
+
+### Schritte im Projekt:
+### 1.	Explorative Datenanalyse (EDA):
+•	Allgemeine Übersicht über den Datensatz (Form, Datentypen, erste Zeilen).
+•	Erfassung numerischer und kategorischer Variablen.
+•	Analyse kategorischer Variablen.
+•	Analyse numerischer Variablen.
+•	Analyse von Ausreißern.
+•	Analyse von fehlenden Werten.
+•	Korrelationsanalyse.
+
+### 2.	Feature Engineering:
+•	Neue Merkmale basierend auf bestehenden Variablen erstellt, z. B. Altersgruppen, BMI-Stufen, etc.
+•	Transformation von numerischen Werten in kategorische Variablen.
+•	Schaffung neuer, aussagekräftiger Merkmale wie Alter in Bezug auf Schwangerschaften.
+
+### 3.	Datenpräparation:
+•	Kodierung von kategorischen Variablen mittels Label-Encoding und One-Hot-Encoding.
+•	Standardisierung numerischer Variablen.
+
+### 4.	Modellierung:
+•	Aufteilung des Datensatzes in Trainings- und Testsets.
+•	Anwendung eines Random Forest Klassifikationsmodells.
+
+### 5.	Modellbewertung:
+•	Bewertung des Modells anhand verschiedener Metriken wie Accuracy, Recall, Precision, F1-Score und AUC.
+
+### 6.	Feature Importance:
+•	Analyse der wichtigsten Merkmale für die Modellentscheidungen.
+
+Das entwickelte Modell zeigt eine Verbesserung gegenüber dem Basismodell, insbesondere in den Metriken Accuracy, Recall und Precision. Feature Engineering trug dazu bei, aussagekräftige Merkmale zu schaffen und die Modellleistung zu steigern.
+
   
-### Explorative Datenanalyse (EDA):
-- Allgemeine Überprüfung der Datenform, Datentypen, erste Zeilen, letzte Zeilen und Quantile.
-- Erfassung numerischer und kategorischer Variablen.
-- Analyse kategorischer Variablen mit Countplots.
-- Analyse numerischer Variablen mit Histogrammen und Deskriptivstatistiken.
-- Untersuchung von Ausreißern und Anpassung der Ausreißerwerte.
-- Analyse und Imputation von fehlenden Werten.
-- Korrelationsmatrix und Heatmap zur Darstellung der Korrelationen zwischen Variablen.
-  
-### Feature Engineering:
-- Schaffung neuer kategorischer Variablen basierend auf Altersgruppen, BMI-Stufen, Glukosewerten, Hautdicke und anderen Merkmalen.
-- Umwandlung von Alters- und Glukosewerten in kategorische Variablen.
-- Erstellung von neuen Merkmalen wie "NEW_INSULIN_SCORE", "NEW_GLUCOSE*INSULIN", usw.
-- Label-Encoding für binäre kategoriale Variablen.
-- One-Hot-Encoding für mehrkategoriale Variablen.
-- Standardisierung der numerischen Variablen.
-  
-### Modellierung:
-- Aufteilung der Daten in Trainings- und Testsets.
-- Verwendung eines RandomForestClassifier-Modells für die Klassifikation.
-- Evaluierung des Modells mit Metriken wie Genauigkeit, Recall, Präzision, F1-Score und AUC-ROC.
-  
-### Ergebnisse:
-- Verbesserte Leistung des Modells nach Feature-Engineering und Datenpräparation.
-- Verbesserte Genauigkeit (Accuracy: 0.79 im Vergleich zu 0.77 des Basis-Modells).
-- Verbesserter Recall (Recall: 0.711 im Vergleich zu 0.706 des Basis-Modells).
-- Verbesserte Präzision (Precision: 0.67 im Vergleich zu 0.59 des Basis-Modells).
-- Verbesserter F1-Score (F1: 0.69 im Vergleich zu 0.64 des Basis-Modells).
-- Verbesserte AUC-ROC (AUC: 0.77 im Vergleich zu 0.75 des Basis-Modells).
-  
-### Feature Importance:
-- Visualisierung der wichtigsten Merkmale im Modell. Wichtige Merkmale können aus der Reihenfolge ihrer Bedeutung abgeleitet werden.
+
