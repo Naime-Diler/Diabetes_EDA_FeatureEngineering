@@ -12,39 +12,44 @@ Der zugrundeliegende Datensatz stammt von den National Institutes of Diabetes-Di
 
 ### Schritte im Projekt:
 ### 1.	Explorative Datenanalyse (EDA):
-•	Allgemeine Übersicht über den Datensatz (Form, Datentypen, erste Zeilen).
+•	Allgemeine Übersicht über den Datensatz (Form, Datentypen, erste Zeilen)
 
-•	Erfassung numerischer und kategorischer Variablen.
+•	Erfassung numerischer und kategorischer Variablen
 
-•	Analyse kategorischer Variablen.
+•	Analyse kategorischer Variablen
 
-•	Analyse numerischer Variablen.
+•	Analyse numerischer Variablen
 
-•	Analyse von Ausreißern.
+•	Analyse von Ausreißern
 
-•	Analyse von fehlenden Werten.
+•	Analyse von fehlenden Werten
 
-•	Korrelationsanalyse.
+•	Korrelationsanalyse
 
 
 ### 2.	Feature Engineering:
-•	Neue Merkmale basierend auf bestehenden Variablen erstellt, z. B. Altersgruppen, BMI-Stufen, etc.
-•	Transformation von numerischen Werten in kategorische Variablen.
-•	Schaffung neuer, aussagekräftiger Merkmale wie Alter in Bezug auf Schwangerschaften.
+•	Neue Merkmale basierend auf bestehenden Variablen erstellt, z. B. Altersgruppen, BMI-Stufen, etc
+
+•	Transformation von numerischen Werten in kategorische Variablen
+
+•	Schaffung neuer, aussagekräftiger Merkmale wie Alter in Bezug auf Schwangerschaften
+
 
 ### 3.	Datenpräparation:
-•	Kodierung von kategorischen Variablen mittels Label-Encoding und One-Hot-Encoding.
-•	Standardisierung numerischer Variablen.
+•	Kodierung von kategorischen Variablen mittels Label-Encoding und One-Hot-Encoding
+
+•	Standardisierung numerischer Variablen
 
 ### 4.	Modellierung:
-•	Aufteilung des Datensatzes in Trainings- und Testsets.
-•	Anwendung eines Random Forest Klassifikationsmodells.
+•	Aufteilung des Datensatzes in Trainings- und Testsets
+
+•	Anwendung eines Random Forest Klassifikationsmodells
 
 ### 5.	Modellbewertung:
-•	Bewertung des Modells anhand verschiedener Metriken wie Accuracy, Recall, Precision, F1-Score und AUC.
+•	Bewertung des Modells anhand verschiedener Metriken wie Accuracy, Recall, Precision, F1-Score und AUC
 
 ### 6.	Feature Importance:
-•	Analyse der wichtigsten Merkmale für die Modellentscheidungen.
+•	Analyse der wichtigsten Merkmale für die Modellentscheidungen
 
 Das entwickelte Modell zeigt eine Verbesserung gegenüber dem Basismodell, insbesondere in den Metriken Accuracy, Recall und Precision. Feature Engineering trug dazu bei, aussagekräftige Merkmale zu schaffen und die Modellleistung zu steigern.
 
