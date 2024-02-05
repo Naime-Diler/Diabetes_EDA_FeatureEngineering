@@ -13,12 +13,19 @@ Der zugrundeliegende Datensatz stammt von den National Institutes of Diabetes-Di
 ### Schritte im Projekt:
 ### 1.	Explorative Datenanalyse (EDA):
 •	Allgemeine Übersicht über den Datensatz (Form, Datentypen, erste Zeilen).
+
 •	Erfassung numerischer und kategorischer Variablen.
+
 •	Analyse kategorischer Variablen.
+
 •	Analyse numerischer Variablen.
+
 •	Analyse von Ausreißern.
+
 •	Analyse von fehlenden Werten.
+
 •	Korrelationsanalyse.
+
 
 ### 2.	Feature Engineering:
 •	Neue Merkmale basierend auf bestehenden Variablen erstellt, z. B. Altersgruppen, BMI-Stufen, etc.
