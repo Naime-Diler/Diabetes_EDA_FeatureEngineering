@@ -1,4 +1,5 @@
-# **Explorative Datenanalyse und fortgeschrittenes Feature Engineering: Entwicklung eines leistungsfähigen Diabetes-Vorhersagemodells!**
+# **Explorative Datenanalyse und fortgeschrittenes Feature Engineering!** 
+## **Übersicht des Diabetesprädiktionsprojekts!**
 
 
 In diesem Diabetes-Projekt standen eine eingehende explorative Datenanalyse (EDA) sowie kreatives Feature-Engineering im Vordergrund, bevor das maschinelle Lernmodell entwickelt wurde. Hier ist eine Zusammenfassung der wichtigsten Schritte:
