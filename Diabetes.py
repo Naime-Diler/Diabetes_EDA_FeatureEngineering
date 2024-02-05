@@ -1,22 +1,20 @@
-Es wird angestrebt, ein maschinelles Lernmodell zu entwickeln, das die Fähigkeit besitzt, vorherzusagen, ob Personen
-an Diabetes erkrankt sind, wenn ihre charakteristischen Merkmale bekannt sind. Vor der eigentlichen Modellentwicklung
-ist es erforderlich, die notwendigen Schritte der Datenanalyse (EDA) und Feature-Engineering zu unternehmen. Der
-zugrundeliegende Datensatz ist Teil einer umfassenden Sammlung der National Institutes of Diabetes-Digestive-Kidney
-Diseases in den USA. Die Daten wurden im Rahmen einer Diabetesstudie an Pima-Indianerinnen im Alter von 21 Jahren und
-älter erhoben, die in Phoenix, der fünftgrößten Stadt des Bundesstaates Arizona, USA, leben. Der Datensatz umfasst 768
-Beobachtungen und beinhaltet 8 numerische unabhängige Variablen. Die Zielvariable ist als "outcome" festgelegt, wobei
-1 ein positives Ergebnis bei einem Diabetes-Test anzeigt und 0 ein negatives Ergebnis bedeutet.
+# Es wird angestrebt, ein maschinelles Lernmodell zu entwickeln, das die Fähigkeit besitzt, vorherzusagen, ob Personen
+# an Diabetes erkrankt sind, wenn ihre charakteristischen Merkmale bekannt sind. Vor der eigentlichen Modellentwicklung
+# ist es erforderlich, die notwendigen Schritte der Datenanalyse (EDA) und Feature-Engineering zu unternehmen. Der
+# zugrundeliegende Datensatz ist Teil einer umfassenden Sammlung der National Institutes of Diabetes-Digestive-Kidney
+# Diseases in den USA. Die Daten wurden im Rahmen einer Diabetesstudie an Pima-Indianerinnen im Alter von 21 Jahren und
+# älter erhoben, die in Phoenix, der fünftgrößten Stadt des Bundesstaates Arizona, USA, leben. Der Datensatz umfasst 768
+# Beobachtungen und beinhaltet 8 numerische unabhängige Variablen. Die Zielvariable ist als "outcome" festgelegt, wobei
+# 1 ein positives Ergebnis bei einem Diabetes-Test anzeigt und 0 ein negatives Ergebnis bedeutet.
 
 
 # Pregnancies: Anzahl der Schwangerschaften
 # Glucose: Glukose
-# BloodPressure: Blutdruck (Diastolisch). Hier bezieht sich "Diastolisch" auf den niedrigeren Druck in den Blutgefäßen
-                während der Entspannungsphase des Herzzyklus.
+# BloodPressure: Blutdruck (Diastolisch). Hier bezieht sich "Diastolisch" auf den niedrigeren Druck in den Blutgefäßen während der Entspannungsphase des Herzzyklus.
 # SkinThickness: Hautdicke
 # Insulin: Insulin
 # BMI: Body Mass Index
-# DiabetesPedigreeFunction: Eine Funktion, die aufgrund genetischer Merkmale und familiärer Verbindungen die
-                           Wahrscheinlichkeit für die Entwicklung von Diabetes bei Personen unserer Abstammung berechnet.
+# DiabetesPedigreeFunction: Eine Funktion, die aufgrund genetischer Merkmale und familiärer Verbindungen die Wahrscheinlichkeit für die Entwicklung von Diabetes bei Personen unserer Abstammung berechnet.
 # Age: Alter (Jahre)
 # Outcome: Information darüber, ob eine Person Diabetes hat oder nicht. Hat die Krankheit (1) oder nicht (0)
 
@@ -346,7 +344,7 @@ zero_columns = [col for col in df.columns if (df[col].min() == 0 and col not in 
 zero_columns
 
 
-# In den Beobachtungseinheiten (Gözlem birim) haben wir alle Variablen mit einem Wert von 0 überprüft und die
+# In den Beobachtungseinheiten haben wir alle Variablen mit einem Wert von 0 überprüft und die
 # entsprechenden Beobachtungswerte durch NaN ersetzt.
 for col in zero_columns:
     df[col] = np.where(df[col] == 0, np.NaN, df[col])
@@ -393,7 +391,7 @@ df.isnull().sum()
 # Korrelation
 #################################
 
-# Korelation beschreibt in der Wahrscheinlichkeitstheorie und Statistik die Richtung und Stärke der linearen Beziehung
+# Korrelation beschreibt in der Wahrscheinlichkeitstheorie und Statistik die Richtung und Stärke der linearen Beziehung
 # zwischen zwei zufälligen Variablen.
 
 df.corr()
@@ -475,7 +473,7 @@ df.loc[(df['BMI'] >= 18.5) & (df['BMI'] < 24.9), 'NEW_BMI_CAT'] = 'healty_weight
 df.loc[(df['BMI'] >= 25) & (df['BMI'] < 29.9), 'NEW_BMI_CAT'] = 'overweight'
 df.loc[(df['BMI'] >= 30), 'NEW_BMI_CAT'] = 'obese'
 
-# äquivalent:
+# äquivalent mit # 2:
 # df['NEW_BMI'] = pd.cut(x=df['BMI'], bins=[0, 18.5, 24.9, 29.9, 100],labels=["Underweight", "Healthy", "Overweight", "Obese"])
 
 df.groupby(["NEW_BMI_CAT", "NEW_AGE_CAT"]).agg({"Outcome": ["count", "mean"]})
@@ -555,7 +553,7 @@ df["NEW_GLUCOSE*PREGNANCIES"] = df["Glucose"] * df["Pregnancies"]
 
 
 
-# Wenn erwünscht: Schriftvergrößerung der Spalten
+# Wenn erwünscht: Schriftvergrößerung der Spalten:
 #df.columns = [col.upper() for col in df.columns]
 
 
