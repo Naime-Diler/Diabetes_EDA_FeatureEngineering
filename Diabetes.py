@@ -1,26 +1,22 @@
-###################################  Diabetes   ###########################
-
-
-
-# Es wird angestrebt, ein maschinelles Lernmodell zu entwickeln, das die Fähigkeit besitzt, vorherzusagen, ob Personen
-# an Diabetes erkrankt sind, wenn ihre charakteristischen Merkmale bekannt sind. Vor der eigentlichen Modellentwicklung
-# ist es erforderlich, die notwendigen Schritte der Datenanalyse (EDA) und Feature-Engineering zu unternehmen. Der
-# zugrundeliegende Datensatz ist Teil einer umfassenden Sammlung der National Institutes of Diabetes-Digestive-Kidney
-# Diseases in den USA. Die Daten wurden im Rahmen einer Diabetesstudie an Pima-Indianerinnen im Alter von 21 Jahren und
-# älter erhoben, die in Phoenix, der fünftgrößten Stadt des Bundesstaates Arizona, USA, leben. Der Datensatz umfasst 768
-# Beobachtungen und beinhaltet 8 numerische unabhängige Variablen. Die Zielvariable ist als "outcome" festgelegt, wobei
-# 1 ein positives Ergebnis bei einem Diabetes-Test anzeigt und 0 ein negatives Ergebnis bedeutet.
+Es wird angestrebt, ein maschinelles Lernmodell zu entwickeln, das die Fähigkeit besitzt, vorherzusagen, ob Personen
+an Diabetes erkrankt sind, wenn ihre charakteristischen Merkmale bekannt sind. Vor der eigentlichen Modellentwicklung
+ist es erforderlich, die notwendigen Schritte der Datenanalyse (EDA) und Feature-Engineering zu unternehmen. Der
+zugrundeliegende Datensatz ist Teil einer umfassenden Sammlung der National Institutes of Diabetes-Digestive-Kidney
+Diseases in den USA. Die Daten wurden im Rahmen einer Diabetesstudie an Pima-Indianerinnen im Alter von 21 Jahren und
+älter erhoben, die in Phoenix, der fünftgrößten Stadt des Bundesstaates Arizona, USA, leben. Der Datensatz umfasst 768
+Beobachtungen und beinhaltet 8 numerische unabhängige Variablen. Die Zielvariable ist als "outcome" festgelegt, wobei
+1 ein positives Ergebnis bei einem Diabetes-Test anzeigt und 0 ein negatives Ergebnis bedeutet.
 
 
 # Pregnancies: Anzahl der Schwangerschaften
 # Glucose: Glukose
 # BloodPressure: Blutdruck (Diastolisch). Hier bezieht sich "Diastolisch" auf den niedrigeren Druck in den Blutgefäßen
-#                während der Entspannungsphase des Herzzyklus.
+                während der Entspannungsphase des Herzzyklus.
 # SkinThickness: Hautdicke
 # Insulin: Insulin
 # BMI: Body Mass Index
 # DiabetesPedigreeFunction: Eine Funktion, die aufgrund genetischer Merkmale und familiärer Verbindungen die
-#                           Wahrscheinlichkeit für die Entwicklung von Diabetes bei Personen unserer Abstammung berechnet.
+                           Wahrscheinlichkeit für die Entwicklung von Diabetes bei Personen unserer Abstammung berechnet.
 # Age: Alter (Jahre)
 # Outcome: Information darüber, ob eine Person Diabetes hat oder nicht. Hat die Krankheit (1) oder nicht (0)
 
