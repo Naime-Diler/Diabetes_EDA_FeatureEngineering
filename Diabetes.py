@@ -167,6 +167,12 @@ def cat_summary(dataframe, col_name, plot=False):
         sns.countplot(x=dataframe[col_name], data=dataframe)
         plt.show()
 
+
+for col in cat_cols:
+    cat_summary(df, col)
+
+
+
 # Die Funktion kann bei Bedarf auf diese Weise aktualisiert werden.
 def cat_summary_l(dataframe, cat_cols, plot=False):
     for col_name in cat_cols:
@@ -177,10 +183,9 @@ def cat_summary_l(dataframe, cat_cols, plot=False):
             sns.countplot(x=dataframe[col_name], data=dataframe)
             plt.show()
 
+
 cat_summary_l(df, cat_cols)
 
-for col in cat_cols:
-    cat_summary(df, col)
 
 
 ##############################################
