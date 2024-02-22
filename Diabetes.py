@@ -85,7 +85,7 @@ check_df(df, head=5)
 
 
 ####################################################
-# Erfassung numerischer und kategorischer Variablen
+# Erfassung numerischer und kategorialer Variablen
 ####################################################
 
 def grab_col_names(dataframe, cat_th=10, car_th=20):
@@ -100,9 +100,9 @@ def grab_col_names(dataframe, cat_th=10, car_th=20):
         dataframe: Dataframe
                 DataFrame, aus dem die Variablennamen extrahiert werden sollen.
         cat_th: int, optional
-                Grenzwert/ Schwellenwert für Variablen, die numerisch, jedoch kategorisch sind.
+                Grenzwert/ Schwellenwert für Variablen, die numerisch, jedoch kategoriale sind.
         car_th: int, optional
-                Grenzwert für kategorische, jedoch kardinale Variablen.
+                Grenzwert für kategoriale, jedoch kardinale Variablen.
 
     Returns
     ------
@@ -111,7 +111,7 @@ def grab_col_names(dataframe, cat_th=10, car_th=20):
         num_cols: list
                 Liste der numerischen Variablen
         cat_but_car: list
-                Liste der kardinalen Variablen mit kategorischem Erscheinungsbild
+                Liste der kardinalen Variablen mit kategorialem Erscheinungsbild
 
     Examples
     ------
@@ -156,7 +156,7 @@ cat_but_car
 
 
 #################################################
-# Analyse kategorischer Variablen
+# Analyse kategorialer Variablen
 ################################################
 
 def cat_summary(dataframe, col_name, plot=False):
@@ -192,22 +192,23 @@ cat_summary_l(df, cat_cols)
 # Analyse numerischer Variablen
 ##############################################
 
-def num_summary(dataframe, numerical_col, plot=False):
-    quantiles = [0.05, 0.10, 0.20, 0.30, 0.40, 0.50, 0.60, 0.70, 0.80, 0.90, 0.95, 0.99]
-    print(dataframe[numerical_col].describe(quantiles).T)
+def num_summary(dataframe, num_col, plot=False):
+    for col in num_cols:
+        quantiles = [0.05, 0.10, 0.20, 0.30, 0.40, 0.50, 0.60, 0.70, 0.80, 0.90, 0.95, 0.99]
+        print(dataframe[num_col].describe(quantiles).T)
 
-    if plot:
-        dataframe[numerical_col].hist(bins=20)
-        plt.xlabel(numerical_col)
-        plt.title(numerical_col)
-        plt.show()
+        if plot:
+            dataframe[num_col].hist(bins=20)
+            plt.xlabel(num_col)
+            plt.title(num_col)
+            plt.show()
 
-for col in num_cols:
-    num_summary(df, col, plot=True)
+
+num_summary(df, num_cols)
 
 
 ################################################################
-# Analyse numerischer Variablen bezogen auf das Ziel (TARGET)
+# Analyse numerischer Variablen bezogen auf die Zielvariable (TARGET)
 ################################################################
 
 def target_summary_with_num(dataframe, target, numerical_col):
