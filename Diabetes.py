@@ -43,7 +43,7 @@ pd.set_option('display.float_format', lambda x: '%.3f' % x)
 
 
 ####################################
-# Datentransfer
+# Daten aus CSV-Datei einlesen
 ###################################
 def load_data(dataframe):
     return pd.read_csv(dataframe)
